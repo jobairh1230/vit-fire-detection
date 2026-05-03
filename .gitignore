@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+
+# Model weights (too large for GitHub)
+*.pth
+*.pt
+*.bin
+models/
+
+# Dataset (too large for GitHub)
+data/raw/
+data/processed/
+fire_smoke_raw/
+fire-smoke-dataset.zip
+FIRE-SMOKE-DATASET.zip
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Colab checkpoints
+.ipynb_checkpoints/

@@ -1,0 +1,51 @@
+{
+  "dataset": {
+    "name": "DeepQuestAI Fire-Smoke-Dataset",
+    "source": "https://github.com/DeepQuestAI/Fire-Smoke-Dataset",
+    "classes": [
+      "fire",
+      "neutral",
+      "smoke"
+    ],
+    "train_size": 2160,
+    "val_size": 540,
+    "test_size": 300
+  },
+  "resnet50": {
+    "accuracy": 0.9567,
+    "f1_score": 0.9566,
+    "precision": 0.9567,
+    "recall": 0.9567,
+    "inference_time_ms": 82.08,
+    "total_params": 23514179,
+    "official_baseline": 0.85
+  },
+  "vit_base": {
+    "accuracy": 0.9633,
+    "f1_score": 0.9634,
+    "precision": 0.9634,
+    "recall": 0.9633,
+    "inference_time_ms": 318.01,
+    "total_params": 85800963
+  },
+  "config": {
+    "data_dir": "/content/vit_fire_detection/data/processed",
+    "num_classes": 3,
+    "class_names": [
+      "fire",
+      "neutral",
+      "smoke"
+    ],
+    "img_size": 224,
+    "batch_size": 32,
+    "num_epochs": 15,
+    "learning_rate_resnet": 0.0001,
+    "learning_rate_vit": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_steps": 100,
+    "vit_model_name": "google/vit-base-patch16-224",
+    "resnet_model": "resnet50",
+    "model_dir": "/content/vit_fire_detection/models",
+    "results_dir": "/content/vit_fire_detection/results"
+  }
+}
